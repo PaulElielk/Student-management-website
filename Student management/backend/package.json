@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-api-exmaple",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "start:clean": "npm cache clean --force && nodemon --ignore 'restaurant_management/*' index.js",
+    "serve": "node index.js",
+    "restart": "killall -9 node || true && npm run start",
+    "clear-cache": "rm -rf node_modules/.cache && npm cache clean --force",
+    "dev": "npm run clear-cache && npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.19",
+    "ws": "^8.18.1"
+  }
+}
